@@ -5,7 +5,7 @@ function NavBar({changeInputValue,statusAddBtn}) {
 
     function onKeyDown(event){
         if(event.key == 'Enter'){
-            changeInputValue(event)
+            statusAddBtn()
         }
     }
 

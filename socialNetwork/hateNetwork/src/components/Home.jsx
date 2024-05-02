@@ -11,10 +11,10 @@ import SideMenu from "./sideMenu";
     function handleInputText (event){
         setInputText(event.target.value)
     }
-    useEffect(()=>{ console.log(status)},[status])
     function addStatus(){
         setStatus(status=>[...status,inpuText])
     }
+    useEffect(()=>{ console.log(status)},[status])
 
     return ( 
     <div id="Home">
