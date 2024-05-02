@@ -12,11 +12,14 @@ import SideMenu from "./sideMenu";
         setInputText(event.target.value)
     }
     useEffect(()=>{ console.log(status)},[status])
+    function addStatus(){
+        setStatus(status=>[...status,inpuText])
+    }
 
     return ( 
     <div id="Home">
            <Menu />
-           <NavBar statusAddBtn={()=>{setStatus(status=>[...status,inpuText]);}} changeInputValue={handleInputText}/>
+           <NavBar statusAddBtn={addStatus} changeInputValue={handleInputText}/>
             <div className='firstPage'>
                 {
                     status.length > 0 && 

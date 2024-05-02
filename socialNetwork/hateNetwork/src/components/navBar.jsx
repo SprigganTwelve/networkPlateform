@@ -4,7 +4,6 @@ function NavBar({changeInputValue,statusAddBtn}) {
 
 
     function onKeyDown(event){
-        console.log(event)
         if(event.key == 'Enter'){
             changeInputValue(event)
         }
