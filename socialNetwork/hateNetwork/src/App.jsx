@@ -1,11 +1,11 @@
 
 import './App.css'
-import Home from './components/Home'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from './components/Layout'
 import MyAcount from './components/MyAcount';
 import MyPub from './components/MyPub';
 import Users from './components/Users';
+import HomePage from './components/HomePage';
 
 function App() {
 
@@ -14,8 +14,8 @@ function App() {
       <Layout />
       <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
+            <Route path="/" element={<HomePage />}>
+            <Route index element={<HomePage />} />
             <Route  path="/users" element={<Users/>}  />
             <Route path="/blogs" element={<MyPub/>} />
             <Route path="/contact" element={<MyAcount />} />

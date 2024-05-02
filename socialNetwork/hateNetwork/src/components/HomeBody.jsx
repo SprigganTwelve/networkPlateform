@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import Menu from "./menu";
-import NavBar from "./navBar";
-import SideMenu from "./sideMenu";
 
-    function Home() {
-        
+// eslint-disable-next-line react/prop-types
+function Home() {
+
     const [inpuText, setInputText] = useState('');
     const [status, setStatus] = useState([])
 
@@ -16,30 +14,39 @@ import SideMenu from "./sideMenu";
     }
     useEffect(()=>{ console.log(status)},[status])
 
-    return ( 
-    <div id="Home">
-           <Menu />
-           <NavBar statusAddBtn={addStatus} changeInputValue={handleInputText}/>
-            <div className='firstPage'>
+
+    function onKeyDown(event){
+        if(event.key == 'Enter'){
+            addStatus()
+        }
+    }
+
+    return (  
+        <>
+        <div>
+            <nav className="NavBar">
+                <input  type="text" onKeyDown={onKeyDown} onChange={handleInputText} className="SearchBar" />
+                <button onClick={addStatus}> + </button>
+            </nav>
+            
+        <div className='toDoContainer'>
+                <div>
                 {
                     status.length > 0 && 
-                    status.map((item,index)=>{
+                    status.map((item,index)=>(
                         <div key={index} className="toDo">
                             <div>{item}</div>
                             <div><button>Edit</button><button>Delete</button></div>
                         </div>
-                    })
+                    ))
                 }
+                </div>
 
             </div>
-            <SideMenu />
-    </div> );
+        </div>
+
+        </>
+    );
 }
 
 export default Home;
-
-{/* <h1>Welcome To Hate Social Network</h1>
-<div>
-    <button className='navButton'>SignUp</button>
-    <button  className='navButton'>Login</button>
-</div> */}
