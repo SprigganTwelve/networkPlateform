@@ -4,7 +4,7 @@ function Layout() {
     return (
         <>
             <div className='link'>
-            <h1>Hate</h1>
+                 <h1>Hate</h1>
                 <img className = "profIcon" src={profilImg} alt="" />
             </div>
         </>
