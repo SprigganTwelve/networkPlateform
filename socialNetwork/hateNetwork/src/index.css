@@ -7,7 +7,7 @@
 
 /*-------------*/
 
-/*-----Page one, position and image--Homepage- toDoContainer-----*/
+/*-----Page one, position and image--Homepage- toDoContainer--container---*/
 
 #homePage{
   display: flex;
@@ -16,7 +16,17 @@
   background-image: url("./assets/image/splash4.jpg");
  background-position: center;
  background-size: cover;
- 
+ scrollbar-width: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, et Opera */
+}
+
+
+.container{
+  height: 100vh;
+  overflow: auto;
 }
 
 .toDoContainer{
@@ -153,7 +163,6 @@ padding: 5px;
   display: flex;
   width: 700px;
   padding-left:50px ;
-  background-color: black;
 }
 
 .NavBar * {
@@ -193,6 +202,12 @@ button  {
   width: 100px;
   text-align: center;
   cursor: pointer;
+  transition: 0.8s all ease;
+}
+
+.Menu *:hover {
+  background-color: rgb(252, 115, 115);
+  color: white;
 }
 
 /*--------toDo--------*/

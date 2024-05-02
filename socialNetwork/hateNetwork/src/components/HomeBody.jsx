@@ -23,7 +23,7 @@ function Home() {
 
     return (  
         <>
-        <div>
+        <div className="container">
             <nav className="NavBar">
                 <input  type="text" onKeyDown={onKeyDown} onChange={handleInputText} className="SearchBar" />
                 <button onClick={addStatus}> + </button>
