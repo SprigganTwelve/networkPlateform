@@ -1,0 +1,217 @@
+/*--global---*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/*-------------*/
+
+/*-----Page one position and image--Homepage------*/
+
+#Home{
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.firstPage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  background-image: url("./assets/image/splash4.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+
+/*-----nav button/routes/a... style--------*/
+
+
+.navButton{
+  margin: 5px;
+  background-color: red;
+  color: white;
+  font-size: 25px;
+  padding: 7px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+/*-----userIcon--------*/
+
+
+.profIcon{
+  height: 50px;
+  border-radius: 50%;
+  width: 50px;
+}
+
+/*-------------*/
+
+/*-------otherUsers-Icon-----*/
+.oneUser img{
+height: 35px;
+width: 35px;
+font-size: 25;
+padding: 5px;
+}
+
+.oneUser{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 0.0px solid black;
+  margin: 7px;
+  color: white;
+  cursor: pointer;
+}
+
+.oneUser .dot{
+  width: 10px;
+  height: 10px;
+  color: transparent;
+  border-radius: 50%;
+  background-color: green;
+}
+
+/* .oneUser::marker{
+  width: 20px;
+  height: 20px;
+  color: green;
+} */
+
+.allUsers{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 230px;
+    height: 100vh;
+    overflow: auto;
+    scrollbar-width: 0;
+  background-color: black;
+
+}
+
+
+.allUsers::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, et Opera */
+}
+
+
+
+#userName{
+  list-style-type: none;
+}
+
+#rond{
+  width: 30px;
+  height: 30px;
+  color: green;
+}
+
+/*-------------*/
+/*------Link-------*/
+
+.link{
+  display: flex;
+  justify-content: space-between;
+  color: aliceblue;
+  background-color: black;
+}
+
+.link *{
+  margin: 10px;
+}
+
+/*------input item css-------*/
+
+.SearchBar{
+  width: 200px;
+  font-size: 27px;
+  padding: 5px;
+  border-radius: 10px ;
+  border: none;
+  outline: none;
+
+}
+
+.NavBar {
+  position: absolute;
+  margin: 20px;
+  height: fit-content;
+  display: flex;
+  left: 35%;
+}
+
+.NavBar * {
+  margin: 5px;
+}
+
+button  {
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+}
+
+/*--------Menu--------*/
+
+.Menu{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.Menu * {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow:  25px 25px 50px #bebebe,
+               -25px -25px 50px #ffffff;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*--------toDo--------*/
+
+.firstPage > div {
+  border-radius: 20px;
+  background: white;
+  box-shadow:  12px 12px 20px #ccc4c4,
+  -12px -12px 20px #ffffff;
+  padding: 30px;
+  color: black;
+}
+
+.toDo{
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.toDo * {
+  text-align: center;
+}
+.toDo button {
+  margin: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+
+}
