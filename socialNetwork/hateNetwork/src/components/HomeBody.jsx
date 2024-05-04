@@ -5,6 +5,7 @@ function Home() {
 
     const [inpuText, setInputText] = useState('');
     const [status, setStatus] = useState([])
+    useEffect(()=>{ console.log(status)},[status])
 
     function handleInputText (event){
         setInputText(event.target.value)
@@ -12,13 +13,17 @@ function Home() {
     function addStatus(){
         setStatus(status=>[...status,inpuText])
     }
-    useEffect(()=>{ console.log(status)},[status])
+
 
 
     function onKeyDown(event){
         if(event.key == 'Enter'){
             addStatus()
         }
+    }
+
+    function edit(event,){
+        console.log(event)
     }
 
     return (  
@@ -36,7 +41,7 @@ function Home() {
                     status.map((item,index)=>(
                         <div key={index} className="toDo">
                             <div>{item}</div>
-                            <div><button>Edit</button><button>Delete</button></div>
+                            <div><button onClick={edit}>Edit</button><button>Delete</button></div>
                         </div>
                     ))
                 }
